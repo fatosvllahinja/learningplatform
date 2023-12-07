@@ -76,16 +76,16 @@ main {
     margin-bottom: 60px;
     padding: 0 20px;
     text-align: center;
-  }
+}
   
-  .course-section {
+.course-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 30px;
-  }
-  
-  .course-box {
+}
+
+.course-box {
     width: 30%;
     margin-bottom: 20px;
     padding: 15px;
@@ -93,33 +93,33 @@ main {
     background-color: white;
     border: 1px solid #02cfc0;
     border-radius: 5px;
-  }
-  
-  .course-box img {
+}
+
+.course-box img {
     width: 100%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
-  }
-  
-  .course-box h2 {
-    margin-bottom: 10px;
-  }
-  
-  .course-box p {
+}
+
+.course-box h2 {
+margin-bottom: 10px;
+}
+
+.course-box p {
     margin-bottom: 8px;
-  }
-  
-  .course-box a {
+}
+
+.course-box a {
     text-decoration: none;
     transition: opacity 0.3s ease;
-  }
-  
-  .course-box a:hover h2 {
+}
+
+.course-box a:hover h2 {
     opacity: 0.8;
-  }
-  
-  .btn {
+}
+
+.btn {
     display: inline-block;
     padding: 8px 16px;
     background-color: #02cfc0;
@@ -127,8 +127,54 @@ main {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     opacity: .8;
-  }
+}
+
+.why-choose-us {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('why_chose_us.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-choose-us ul {
+    list-style: square;
+    padding: 0;
+    margin-left: 30px;
+}
+
+.why-choose-us .column {
+    flex: 1;
+    padding: 0 10px;
+    text-align: center;
+
+}
+
+.why-choose-us .column p {
+    margin-bottom: 30px;
+}
+
+.signup-btn a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #02cfc0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.signup-btn a:hover {
+    opacity: .8;
+}
