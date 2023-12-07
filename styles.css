@@ -1,13 +1,70 @@
-/* This styling is used by all the pages */
+/* 
+    This styling is used by all the pages 
+*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
     background-color: #f2f2f2;
+}
+
+/* HEADER AND NAVIGATION */
+
+header {
+    background-color: #fff;
+    padding: 20px;
+}
+  
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+nav ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+  
+nav ul li {
+    margin-right: 20px;
+}
+  
+nav ul li:last-child {
+    margin-right: 0;
+}
+  
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+  
+.login-btn {
+    padding: 10px 20px;
+    background-color: #02cfc0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+  
+.login-btn a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+  
+.login-btn:hover {
+    opacity: 0.8;
 }
