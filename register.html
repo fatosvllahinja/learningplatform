@@ -90,5 +90,47 @@
     <footer>
       <p>&copy; 2023 Online Learning Platform. All rights reserved. | Contact: info@onlinelearningplatform.com</p>
     </footer>
+    <script>
+          document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('registerForm');
+  
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+  
+        const hasNumbers = /\d/.test(username);
+        if (hasNumbers) {
+          alert('Username cannot contain numbers.');
+          return false;
+        }
+  
+        if (username === '' || email === '' || password === '' || confirmPassword === '') {
+          alert('Please fill in all fields.');
+          return false;
+        }
+  
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          alert('Please enter a valid email address.');
+          return false;
+        }
+  
+        const hasSpecialCharacter = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        if (!hasSpecialCharacter) {
+          alert('Password should contain at least one special character.');
+          return false;
+        }
+  
+        if (password !== confirmPassword) {
+          alert('Passwords do not match.');
+          return false;
+        }
+      });
+    });
+    </script>
 </body>
 </html>
