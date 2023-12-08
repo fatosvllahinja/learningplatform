@@ -30,6 +30,28 @@
     .course-description {
       margin-bottom: 20px;
     }
+
+    .curriculum {
+      text-align: left;
+    }
+
+    .curriculum ul {
+      list-style-type: disc;
+      padding: 0;
+    }
+
+    .curriculum li {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+    
+    .curriculum-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 50px;
+    }
   </style>
 </head>
 <body>
@@ -54,6 +76,20 @@
         <div class="instructor-info">
           <p>Instructor: John Doe</p>
           <p>Email: johndoe@onlinelearningplatform.com</p>
+        </div>
+      </div>
+      <div class="curriculum-container">
+        <div class="curriculum">
+          <h2>Curriculum</h2>
+          <ul>
+            <li>Introduction to HTML</li>
+            <li>Styling with CSS</li>
+            <li>JavaScript Basics</li>
+            <li>Project: Building a Simple Website</li>
+          </ul>
+        </div>
+        <div class="signup-btn">
+          <a href="register.html">Purchase</a>
         </div>
       </div>
     </main>
