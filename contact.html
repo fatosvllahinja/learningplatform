@@ -24,8 +24,79 @@
               </div>
         </nav>
     </header>
+  <section class="contact-us">
+    <h2>Contac Us</h2>
+  </section>
+  <main class="main-container">
+    <div class="left-section">
+      <h1>Contact Us</h1>
+      <p>Please use the form below to get in touch with us.</p>
+    </div>
+    <div class="right-section">
+      <div class="contact-form-container">
+        <form id="contactForm">
+          <div class=form-group">
+            <lable for="name">name</lable>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <lable for="email">Email</lable>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <lable for="message">Message</lable>
+            <textarea id="message" name="message" rows="4" required></textarea>            
+          </div>
+          <button type="submit" id="submitBtn">Submit</button>
+        </form>        
+      </div>
+    </div>
+  </main>
+  <section class="why-choose-us">
+    <div class="column">
+      <h2>Why Choose Us?</h2>
+    </div>
+    <div class="column">
+      <h3>Our platform offers:</h3>
+      <ul>
+        <li>High-quality courses</li>
+        <li>Experienced instructors</li>
+        <li>Flexibile learing schedules</li>
+        <li>Interactiv learning resources</li>
+      </ul>
+    </div>
+    <div class="column">
+      <p>Start your learning journey with us today!</p>
+      <div class="signup-btn">
+        <a href="register.html"> Sign Up!</a>
+      </div>
+    </div>
+  </section>
     <footer>
       <p>&copy; 2023 Online Learning Platform. All rights reserved. | Contact: info@onlinelearningplatform.com</p>
     </footer>
 </body>
+  <script>
+    document.addEventListener('DOMCnotentLoaded',function() {
+      const form = document.getElementById('contactForm');
+
+      form.addEventListener('submit', function(event){
+        event.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+         const email = document.getElementById('email').value.trim();
+         const message = document.getElementById('message').value.trim();
+        if(name === '' || email ==='' || message === '') {
+          alert('Please fill in all fields.');
+          return false;
+        }
+        const emailPattern = /^[^\s@]+@[ ^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          alert('Please enter a valid email address.');
+          return false;
+        }
+        alert('Form submitted successfully!');
+      });
+    });
+  </script>
 </html>
