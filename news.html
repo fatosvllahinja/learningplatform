@@ -8,6 +8,61 @@
   <title>News - Online Learning Platform</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    .latest-news-section {
+      text-align: center;
+      padding: 20px;
+    }
+    .latest-new-container{
+      display: inline-block;
+    }
+    .latest-news-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .latest-news-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 600px;
+    }
+    .latest-news-item img{
+      width: 250px;
+      height: auto;
+      margin-right: 15px;
+    }
+    .news-content{
+      flex: 1;
+    }
+    news-content a{
+      color: #02cfc0;
+      text-decoration: none;
+    }
+    .pagination {
+      margin-top: 20px;
+    }
+    pagination ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .pagination li{
+      display: inline;
+    }
+    .pagination a: {
+    text-decoration: none;
+      padding: 5px 10 px;
+      border: 1px solid #02cfc0;
+      border-radius: 5px;
+      color:#02cfc0
+    }
+    .pagination a:hover{
+      background-color: #02cfc0;
+      color:white;
+    }
   </style>
 </head>
 <body>
