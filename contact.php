@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     .contact-us {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('contact_header.jpg');
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/contact_header.jpg');
       background-size: cover;
       background-position: center;
       color: #fff;
@@ -36,7 +36,7 @@
     }
 
     .contact-form-container {
-      border: 2px solid #02cfc0;
+      border: 2px solid #c2c2c2;
       padding: 20px;
       max-width: 600px;
       margin: 0 auto;
@@ -57,7 +57,7 @@
     textarea {
       width: calc(100% - 24px);
       padding: 8px;
-      border: 1px solid #02cfc0;
+      border: 1px solid #c2c2c2;
       border-radius: 5px;
     }
 
@@ -93,13 +93,20 @@
   <header>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="about.php">About Us</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
       </ul>
       <div class="login-btn">
-        <a href="register.html">Login/Register</a>
+        <?php
+            session_start();
+            if (isset($_SESSION['user_id'])) {
+                echo '<a href="logout.php">Logout</a></li>';
+            } else {
+                echo '<a href="login.php">Login</a>';
+            }
+        ?>
       </div>
     </nav>
   </header>
@@ -113,7 +120,7 @@
     </div>
     <div class="right-section">
       <div class="contact-form-container">
-        <form id="contactForm">
+        <form id="contactForm" action="contact_data.php" method="post">
           <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -147,7 +154,7 @@
     <div class="column">
     <p>Start your learning journey with us today!</p>
       <div class="signup-btn">
-        <a href="register.html">Sign Up!</a>
+        <a href="register.php">Register</a>
       </div>
     </div>
   </section>
@@ -155,7 +162,7 @@
     <p>&copy; 2023 Online Learning Platform. All rights reserved.</p>
   </footer>
 </body>
-<script>
+<!-- <script>
   document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('contactForm');
 
@@ -179,5 +186,5 @@
     alert('Form submitted successfully!');
   });
 });
-</script>
+</script> -->
 </html>
